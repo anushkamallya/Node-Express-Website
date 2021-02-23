@@ -9,6 +9,7 @@ const app = express();
 //Define port that application should listen to
 const port = 3000;
 
+//Look into static folder for each request received and if match of file is found, return it as response
 app.use(express.static(path.join(__dirname, './static')));
 
 app.get('/', (request, response) => {
